@@ -2,6 +2,7 @@ input[type=text], input[type=password]
 {
     border:4px solid black;
     background-color: transparent;
+    
     /* border-bottom: 1px solid black; */
 }
 
@@ -9,4 +10,26 @@ input:focus, textarea:focus, select:focus{
   outline: none;
 }
 
+.form-flex {
+  display: flex;
+  flex-direction: row;
+}
 
+.input-flex {
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: black;
+  font-weight: 600;
+}
+
+.form-div {
+  background-color: white;
+  border-radius: 20px;
+  padding: 80px 30px 30px 30px;
+}
