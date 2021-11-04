@@ -1,0 +1,12 @@
+input[type=text], input[type=password]
+{
+    border:4px solid black;
+    background-color: transparent;
+    /* border-bottom: 1px solid black; */
+}
+
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+
+

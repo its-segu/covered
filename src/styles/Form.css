@@ -1,0 +1,63 @@
+.button-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.gift-button {
+  background-color: #d9dfd936;
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 700;
+  color: black
+}
+.balance-button {
+  background-color: #d9dfd936;
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 700;
+  color: blue
+}
+.faq-button {
+   width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #3DC8A6;
+
+    /* background-image: url("../images/road.jpg"); */
+}
+.check-your-balance-button {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #3DC8A6;
+    background-image: url('https://codetheweb.blog/assets/img/posts/full-image-hero/image.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
