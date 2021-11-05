@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Form.css";
 import FormSubmit from "../components/FormSubmit";
-import NavBar from "./NavBar";
+import Loading from "./Loading";
 // import { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -28,8 +28,9 @@ export default function FormPage(props) {
   const classes = useStyles();
 
   return (
+    
     <div className={classes.root}>
-      <NavBar />
+        <Loading/>
       <header class="button-container">
         <div class="faq-button">
           <FormSubmit />

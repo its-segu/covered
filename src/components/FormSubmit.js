@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../styles/FormSubmit.css";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   buttonPrime: {
@@ -19,6 +20,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function FormSubmit(props) {
+  const history = useHistory();
+
   const classes = useStyles();
   const [name, setName] = useState("");
   const [gender, setGender] = useState("");
@@ -28,7 +31,9 @@ export default function FormSubmit(props) {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    alert(`Submitting Name ${name}`);
+    history.push(`/results`);
+
+    // alert(`Submitting Name ${name}`);
   };
 
   return (

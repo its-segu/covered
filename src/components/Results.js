@@ -15,6 +15,7 @@ import useGlobal from "../store";
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
+    padding:30
   },
   appointment: {
     backgroundColor: "#efefef",
@@ -57,46 +58,10 @@ export default function Results() {
   const classes = useStyles();
   const [sortedAppointments, setSortedAppointments] = useState([])
   const [globalState, globalActions] = useGlobal();
-  const [appointments, setAppointments] = useState([])
 
-  useEffect(() => {
-    // fetch('https://sampledata.petdesk.com/api/appointments')
-    // .then(response => response.json())
-    // .then(data => sortAppointments(data));
-  }, []);
-
-  const sortAppointments = (data) => {
-    const now = new Date();
-    for (var i=0; i < data.length; i++) {
-      var startTime = data[i].requestedDateTimeOffset.slice(0, -6)
-      var endTimeSplit = data[i].requestedDateTimeOffset.split("-",6)
-      var startTimeSplit = data[i].requestedDateTimeOffset.split("T",2)
-      data[i]["startTime"] = startTime;
-      data[i]["endTime"] = startTimeSplit[0] + "T" + endTimeSplit[3]
-    }
-    data.sort((a,b) => {
-      const [aTime, bTime] = [a.startTime,b.endTime].map(d => Math.abs(new Date(d) - now));
-      return bTime - aTime;
-    });
-    setAppointments(data)
-  }
-
-  const rescheduleClick = (appointment) => {
-    globalActions.showDialog(true);
-  }
-
-  const confirmClick = (appointment) => {
-    globalActions.confirmedAppointment(appointment);
-    var index = appointments.indexOf(appointment);
-    if (index > -1) {
-        appointments.splice(index, 1);
-    }
-    setAppointments(appointments)
-  }
 
   return (
     <div className={classes.root}>
-    {/* {appointments.map((appointment, i) => ( */}
       <div className={classes.appointment}>
       <h6>Steph Seg</h6>
       <h6>Date: </h6>
@@ -111,7 +76,6 @@ export default function Results() {
       }}>Reschedule</Button>
       </div>
       </div>
-    {/* ))} */}
     </div>
   )
 }
