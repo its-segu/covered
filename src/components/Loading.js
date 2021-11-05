@@ -12,15 +12,16 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function Loading() {
-  const [globalState, globalActions] = useGlobal();
-  const [open, setOpen]  = useGlobal((state) => state.showDialog);
+export default function Loading(props) {
+    const [open, setOpen] = React.useState(false);
 
-  useEffect(() => {
-    // Update the document title using the browser API
-    console.log("understood")
-    console.log(globalState)
-  });
+//   const [globalState, globalActions] = useGlobal();
+//   const [open, setOpen]  = useGlobal((state) => state.showDialog);
+
+//   useEffect(() => {
+//       console.log(open)
+//     // Update the document title using the browser API
+//   }, [open]);
   
   const handleClickOpen = () => {
     setOpen(true);
@@ -33,7 +34,7 @@ export default function Loading() {
   return (
     <div>
       <Dialog
-        open={open}
+        open={props.open}
         TransitionComponent={Transition}
         keepMounted
         onClose={handleClose}

@@ -3,7 +3,7 @@ import globalHook from "use-global-hook";
 import * as actions from "../actions";
 
 const initialState = {
-  showDialog: true,
+  showDialog: false,
   confirmedAppointments: [],
 };
 

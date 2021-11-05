@@ -8,6 +8,8 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import useGlobal from "../store";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,10 +28,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default function FormPage(props) {
   const classes = useStyles();
+  const [globalState, globalActions] = useGlobal();
+  const [open, setOpen]  = useGlobal((state) => state.showDialog);
 
   return (
     <div className={classes.root}>
-      <Loading />
+      <Loading open={open} />
       <header class="button-container">
         <div class="faq-button">
           <FormSubmit />

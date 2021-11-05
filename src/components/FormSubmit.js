@@ -34,6 +34,7 @@ export default function FormSubmit(props) {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     globalActions.showDialog(true);
+    console.log(globalState)
 
     // history.push(`/results`);
 

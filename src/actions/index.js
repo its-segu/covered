@@ -5,9 +5,12 @@
 // };
 
 export const showDialog = (store, open) =>  {
-  console.log(open)
-  const openStatus = open;
-  store.setState({ showDialog: openStatus });
+  // console.log(open)
+  // const openStatus = open;
+  // store.setState({ showDialog: openStatus });
+
+  const openStatus = store.state.showDialog = open
+  store.setState({ openStatus });
 }
 
 export const closeDialog = (store, close) =>  {
