@@ -28,9 +28,8 @@ export default function FormPage(props) {
   const classes = useStyles();
 
   return (
-    
     <div className={classes.root}>
-        <Loading/>
+      <Loading />
       <header class="button-container">
         <div class="faq-button">
           <FormSubmit />

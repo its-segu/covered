@@ -3,8 +3,8 @@ import globalHook from "use-global-hook";
 import * as actions from "../actions";
 
 const initialState = {
-  dialog: false,
-  confirmedAppointments: []
+  showDialog: true,
+  confirmedAppointments: [],
 };
 
 const useGlobal = globalHook(React, initialState, actions);

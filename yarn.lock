@@ -11703,10 +11703,10 @@
     "punycode" "1.3.2"
     "querystring" "0.2.0"
 
-"use-global-hook@^0.3.0":
-  "integrity" "sha512-uzQmqPuBUEZV4oJOpnhnwLEVkGOfc471k6uul1SgNM43HWS3ZjL8tb1QKa2VjoGPNk40nvnl8kndZnIyiVNvtA=="
-  "resolved" "https://registry.npmjs.org/use-global-hook/-/use-global-hook-0.3.0.tgz"
-  "version" "0.3.0"
+"use-global-hook@^0.2.1":
+  "integrity" "sha512-eQ5zYIFiku4vUxckbIR2rnpwwSv8egu190ED0Q18yPd+N0m1GPb+PnNWdpw2OZpsDCQiJgtHxFwnPAe16A2J5w=="
+  "resolved" "https://registry.npmjs.org/use-global-hook/-/use-global-hook-0.2.5.tgz"
+  "version" "0.2.5"
 
 "use@^3.1.0":
   "integrity" "sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ=="

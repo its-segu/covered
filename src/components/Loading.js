@@ -1,20 +1,27 @@
 import * as React from "react";
+import { useState, useEffect, useCallback, updateState} from "react";
+
 import "../styles/Loading.css";
-import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DialogTitle from "@material-ui/core/DialogTitle";
 import Slide from "@material-ui/core/Slide";
+import useGlobal from "../store";
+
+
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
 export default function Loading() {
-  const [open, setOpen] = React.useState(true);
+  const [globalState, globalActions] = useGlobal();
+  const [open, setOpen]  = useGlobal((state) => state.showDialog);
 
+  useEffect(() => {
+    // Update the document title using the browser API
+    console.log("understood")
+    console.log(globalState)
+  });
+  
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -25,9 +32,6 @@ export default function Loading() {
 
   return (
     <div>
-      {/* <Button variant="outlined" onClick={handleClickOpen}>
-        Slide in alert dialog
-      </Button> */}
       <Dialog
         open={open}
         TransitionComponent={Transition}
@@ -35,12 +39,12 @@ export default function Loading() {
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
         PaperProps={{
-            style: {
-              backgroundColor: 'transparent',
-              maxWidth: "65%",
-              boxShadow: "none"
-            },
-          }}
+          style: {
+            backgroundColor: "transparent",
+            maxWidth: "65%",
+            boxShadow: "none",
+          },
+        }}
       >
         <div class="load-wrapp">
           <div class="load-3">

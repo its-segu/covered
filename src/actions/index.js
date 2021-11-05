@@ -1,8 +1,8 @@
-export const confirmedAppointment = (store, appointment) => {
-  const confirmed = store.state.confirmedAppointments.push(appointment);
-  store.setState();
+// export const confirmedAppointment = (store, appointment) => {
+//   const confirmed = store.state.confirmedAppointments.push(appointment);
+//   store.setState();
 
-};
+// };
 
 export const showDialog = (store, open) =>  {
   console.log(open)
