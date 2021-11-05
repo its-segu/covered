@@ -16,9 +16,11 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    color:"black"
   },
   navBarColor: {
-    backgroundColor: "#2C2C2C"
+    backgroundColor: "white",
+
   },
 }));
 
@@ -28,7 +30,7 @@ export default function NavBar(props) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" className={classes.navBarColor}>
+      <AppBar position="fixed" className={classes.navBarColor}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             PetDesk Appointments

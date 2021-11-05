@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Form.css";
 import FormSubmit from "../components/FormSubmit";
+import NavBar from "./NavBar";
 // import { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -28,18 +29,15 @@ export default function FormPage(props) {
 
   return (
     <div className={classes.root}>
-        <header class="button-container">
-              <div class="faq-button">
-              <FormSubmit/>
-
-                {/* <button class="gift-button">GIFT CARD</button>
-                <button class="gift-button">FAQ</button> */}
-              </div>
-              <div class="check-your-balance-button">
-                <button class="balance-button">CHECK</button>
-                <button class="balance-button">YOUR BALANCE</button>
-              </div>
-          </header>
+      <NavBar />
+      <header class="button-container">
+        <div class="faq-button">
+          <FormSubmit />
+        </div>
+        <div class="check-your-balance-button">
+          <h1>We've got you covered!</h1>
+        </div>
+      </header>
     </div>
   );
 }
