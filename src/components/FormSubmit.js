@@ -38,6 +38,7 @@ export default function FormSubmit(props) {
     dob: dob,
     interger: interger,
   };
+  
   useEffect(() => {
     AOS.init({
       duration: 1500,
@@ -56,7 +57,7 @@ export default function FormSubmit(props) {
 
   return (
     <form className="form-div" onSubmit={handleSubmit}>
-      <h1 className="header-text" data-aos="fade-down">We've got you covered!</h1>
+      <h1 className="header-text">We've got you covered!</h1>
       <div data-aos="fade-up">
       <div className="form-flex">
         <div className="input-flex">
