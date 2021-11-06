@@ -4,6 +4,8 @@ import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import { useHistory } from "react-router-dom";
 import useGlobal from "../store";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const useStyles = makeStyles((theme) => ({
   buttonPrime: {
@@ -36,6 +38,11 @@ export default function FormSubmit(props) {
     dob: dob,
     interger: interger,
   };
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+    });
+  }, []);
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -49,7 +56,8 @@ export default function FormSubmit(props) {
 
   return (
     <form className="form-div" onSubmit={handleSubmit}>
-      <h1 className="header-text">We've got you covered!</h1>
+      <h1 className="header-text" data-aos="fade-down">We've got you covered!</h1>
+      <div data-aos="fade-up">
       <div className="form-flex">
         <div className="input-flex">
           <label>Name</label>
@@ -148,6 +156,7 @@ export default function FormSubmit(props) {
       >
         Submit
       </Button>
+      </div>
     </form>
   );
 }
