@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Form.css";
-import RescheduleDialog from "./RescheduleDialog";
-
 import FormSubmit from "./FormSubmit";
 import Loading from "./Loading";
-
-// import { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import useGlobal from "../store";
 
@@ -34,20 +30,19 @@ export default function PageContainer(props) {
   //   // Update the document title using the browser API
   // }, [open]);
 
-
   const thisHappened = () => {
-    console.log("clicking")
-    setOpen(true)
-  }
+    console.log("clicking");
+    setOpen(true);
+  };
 
   return (
     <div className={classes.root}>
       {/* <RescheduleDialog /> */}
 
-      <Loading open={open}/>
+      <Loading open={open} />
       <header className="button-container">
         <div className="faq-button">
-          <FormSubmit onHappened={thisHappened}  />
+          <FormSubmit onHappened={thisHappened} />
         </div>
         <div className="check-your-balance-button">
           <h1>We've got you covered!</h1>
