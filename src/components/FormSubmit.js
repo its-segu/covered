@@ -40,12 +40,16 @@ export default function FormSubmit(props) {
 
   const handleSubmit = (evt) => {
     // globalActions.showDialog(personObject);
+    props.onHappened()
     evt.preventDefault();
-    globalActions.addToCustomers(personObject);
-    console.log(globalState);
 
-    // console.log(personObject)
-    history.push(`/results`);
+    setTimeout(() => {
+      globalActions.addToCustomers(personObject);
+      history.push(`/results`)
+    }, 3000);
+
+
+    ;
 
     // globalActions.showDialog(true);
   };
@@ -147,7 +151,7 @@ export default function FormSubmit(props) {
         classes={{
           root: classes.buttonPrime,
         }}
-        onClick={props.onHappened}
+        // onClick={props.onHappened}
       >
         Submit
       </Button>

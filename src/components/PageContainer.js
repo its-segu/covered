@@ -37,7 +37,7 @@ export default function PageContainer(props) {
 
   const thisHappened = () => {
     console.log("clicking")
-    setOpen(!open)
+    setOpen(true)
   }
 
   return (
