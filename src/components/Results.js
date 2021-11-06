@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
     boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"
   },
   header: {
-    backgroundColor: "black",
+    backgroundColor: "#55d1c5",
     height: 10,
     cursor: "pointer",
     display: "flex",
@@ -95,7 +95,7 @@ export default function Results() {
       <h6>Interger</h6>
       </div>
       {customers.map((customer, i) => (
-      <div key={i} data-aos="fade-up" className={classes.customer}>
+      <div key={i} className={classes.customer}>
       <h4>{customer.name}</h4>
       <h4>{customer.gender}</h4>
       <h4>{customer.maritalStatus}</h4>
