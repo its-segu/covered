@@ -16,7 +16,10 @@ import useGlobal from "../store";
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
-    padding:30
+    paddingTop:100,
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "column"
   },
   appointment: {
     backgroundColor: "#efefef",
@@ -29,7 +32,8 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "space-between",
     color: "black",
     marginBottom: 5,
-    color: "#636161"
+    color: "#636161",
+    width: "95%"
   },
   buttonDiv: {
     alignSelf: "flex-end",
@@ -59,16 +63,21 @@ export default function Results() {
   const classes = useStyles();
   const [sortedAppointments, setSortedAppointments] = useState([])
   const [customers] = useGlobal((state) => state.customers);
-
+  // name: name,
+  // gender: gender,
+  // maritalStatus: maritalStatus,
+  // dob: dob,
+  // interger: interger,
 
   return (
     <div className={classes.root}>
       {customers.map((customer, i) => (
-      <div className={classes.appointment}>
-      <h6>Steph Seg</h6>
-      <h6>Date: </h6>
-      <h6>Start:</h6>
-      <h6>End:</h6>
+      <div key={i} className={classes.appointment}>
+      <h6>{customer.name}</h6>
+      <h6>{customer.gender}</h6>
+      <h6>{customer.maritalStatus}</h6>
+      <h6>{customer.dob}</h6>
+      <h6>{customer.interger}</h6>
       <div className={classes.buttonDiv}>
       <Button classes={{
         root: classes.buttonSecond,

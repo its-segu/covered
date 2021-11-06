@@ -39,19 +39,13 @@ export default function FormSubmit(props) {
   };
 
   const handleSubmit = (evt) => {
-    // globalActions.showDialog(personObject);
-    props.onHappened()
     evt.preventDefault();
+    props.onHappened();
 
     setTimeout(() => {
       globalActions.addToCustomers(personObject);
-      history.push(`/results`)
-    }, 3000);
-
-
-    ;
-
-    // globalActions.showDialog(true);
+      history.push(`/results`);
+    }, 2000);
   };
 
   return (
