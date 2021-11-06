@@ -4,7 +4,7 @@ import * as actions from "../actions";
 
 const initialState = {
   showDialog: false,
-  confirmedAppointments: [],
+  customers: [],
 };
 
 const useGlobal = globalHook(React, initialState, actions);

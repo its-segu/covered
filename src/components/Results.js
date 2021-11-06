@@ -12,6 +12,7 @@ import EditIcon from '@material-ui/icons/Edit';
 import Button from '@material-ui/core/Button';
 import useGlobal from "../store";
 
+
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
@@ -57,11 +58,12 @@ const useStyles = makeStyles(theme => ({
 export default function Results() {
   const classes = useStyles();
   const [sortedAppointments, setSortedAppointments] = useState([])
-  const [globalState, globalActions] = useGlobal();
+  const [customers] = useGlobal((state) => state.customers);
 
 
   return (
     <div className={classes.root}>
+      {customers.map((customer, i) => (
       <div className={classes.appointment}>
       <h6>Steph Seg</h6>
       <h6>Date: </h6>
@@ -76,6 +78,7 @@ export default function Results() {
       }}>Reschedule</Button>
       </div>
       </div>
+      ))}
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/FormSubmit.css";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
@@ -22,36 +22,45 @@ const useStyles = makeStyles((theme) => ({
 
 export default function FormSubmit(props) {
   const history = useHistory();
-
   const classes = useStyles();
   const [globalState, globalActions] = useGlobal();
+  const [open, setOpen] = useGlobal((state) => state.showDialog);
   const [name, setName] = useState("");
-  const [gender, setGender] = useState("");
-  const [maritalStatus, setMaritalStatus] = useState("");
+  const [gender, setGender] = useState("Male");
+  const [maritalStatus, setMaritalStatus] = useState("Single");
   const [dob, setDOB] = useState("");
   const [interger, setInterger] = useState("");
+  let personObject = {
+    name: name,
+    gender: gender,
+    maritalStatus: maritalStatus,
+    dob: dob,
+    interger: interger,
+  };
 
   const handleSubmit = (evt) => {
+    // globalActions.showDialog(personObject);
     evt.preventDefault();
-    globalActions.showDialog(true);
-    console.log(globalState)
+    globalActions.addToCustomers(personObject);
+    console.log(globalState);
 
-    // history.push(`/results`);
+    // console.log(personObject)
+    history.push(`/results`);
 
-    // alert(`Submitting Name ${name}`);
+    // globalActions.showDialog(true);
   };
 
   return (
-    <form class="form-div" onSubmit={handleSubmit}>
-      <h1 class="header-text">We've got you covered!</h1>
-      <div class="form-flex">
-        <div class="input-flex">
+    <form className="form-div" onSubmit={handleSubmit}>
+      <h1 className="header-text">We've got you covered!</h1>
+      <div className="form-flex">
+        <div className="input-flex">
           <label>Name</label>
           <input
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            class="searchInput"
+            className="searchInput"
             style={{
               borderRadius: 0,
               height: 10,
@@ -60,12 +69,12 @@ export default function FormSubmit(props) {
             }}
           />
         </div>
-        <div class="input-flex">
+        <div className="input-flex">
           <label>Gender</label>
           <select
             value={gender}
             onChange={(e) => setGender(e.target.value)}
-            class=""
+            className=""
             style={{
               borderRadius: 0,
               color: "black",
@@ -80,13 +89,13 @@ export default function FormSubmit(props) {
           </select>
         </div>
       </div>
-      <div class="form-flex">
-        <div class="input-flex">
+      <div className="form-flex">
+        <div className="input-flex">
           <label>Marital Status</label>
           <select
             value={maritalStatus}
             onChange={(e) => setMaritalStatus(e.target.value)}
-            class=""
+            className=""
             style={{
               borderRadius: 0,
               color: "black",
@@ -99,13 +108,13 @@ export default function FormSubmit(props) {
             <option value="Married">Married</option>
           </select>
         </div>
-        <div class="input-flex">
+        <div className="input-flex">
           <label>Date of Birth</label>
           <input
             type="text"
             value={dob}
             onChange={(e) => setDOB(e.target.value)}
-            class="searchInput"
+            className="searchInput"
             style={{
               borderRadius: 0,
               height: 10,
@@ -115,14 +124,14 @@ export default function FormSubmit(props) {
           />
         </div>
       </div>
-      <div class="form-flex">
-        <div class="last-input">
+      <div className="form-flex">
+        <div className="last-input">
           <label>Number</label>
           <input
             type="text"
             value={interger}
             onChange={(e) => setInterger(e.target.value)}
-            class="searchInput"
+            className="searchInput"
             style={{
               borderRadius: 0,
               height: 10,
@@ -138,6 +147,7 @@ export default function FormSubmit(props) {
         classes={{
           root: classes.buttonPrime,
         }}
+        onClick={props.onHappened}
       >
         Submit
       </Button>
