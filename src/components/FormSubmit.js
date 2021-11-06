@@ -58,7 +58,7 @@ export default function FormSubmit(props) {
   return (
     <form className="form-div" onSubmit={handleSubmit}>
       <h1 className="header-text">We've got you covered!</h1>
-      <div >
+      <div data-aos="fade-up">
       <div className="form-flex">
         <div className="input-flex">
           <label>Name</label>
@@ -148,7 +148,6 @@ export default function FormSubmit(props) {
         </div>
       </div>
       <Button
-      data-aos="fade-up"
         type="submit"
         value="Submit"
         classes={{

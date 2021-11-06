@@ -86,8 +86,8 @@ export default function Results() {
   }, []);
 
   return (
-    <div className={classes.root}>
-      <div  className={classes.header}>
+    <div  className={classes.root}>
+      <div data-aos="fade-down"className={classes.header}>
       <h6>Name</h6>
       <h6>Gender</h6>
       <h6>Marital Status</h6>
@@ -95,7 +95,7 @@ export default function Results() {
       <h6>Interger</h6>
       </div>
       {customers.map((customer, i) => (
-      <div key={i} className={classes.customer}>
+      <div data-aos="fade-up" key={i} className={classes.customer}>
       <h4>{customer.name}</h4>
       <h4>{customer.gender}</h4>
       <h4>{customer.maritalStatus}</h4>
