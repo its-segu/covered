@@ -6,7 +6,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { useHistory } from "react-router-dom";
-
+import myIcon from "../images/covered-logomark.svg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,21 +28,20 @@ export default function NavBar(props) {
   const classes = useStyles();
   let history = useHistory();
 
-
   const homeView = () => {
     history.push(`/covered`);
-  }
+  };
 
   return (
     <div className={classes.root}>
       <AppBar position="fixed" className={classes.navBarColor}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            PetDesk Appointments
+            <img src={myIcon} alt="icon" width="130px" />
           </Typography>
 
-          <Button color="inherit" onClick={homeView}>
-            Confirmed Appointments
+          <Button onClick={homeView}>
+            Back To Form
           </Button>
         </Toolbar>
       </AppBar>

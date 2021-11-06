@@ -24,7 +24,6 @@ export default function FormSubmit(props) {
   const history = useHistory();
   const classes = useStyles();
   const [globalState, globalActions] = useGlobal();
-  const [open, setOpen] = useGlobal((state) => state.showDialog);
   const [name, setName] = useState("");
   const [gender, setGender] = useState("Male");
   const [maritalStatus, setMaritalStatus] = useState("Single");

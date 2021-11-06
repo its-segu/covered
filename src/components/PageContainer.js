@@ -3,7 +3,6 @@ import "../styles/Form.css";
 import FormSubmit from "./FormSubmit";
 import Loading from "./Loading";
 import { makeStyles } from "@material-ui/core/styles";
-import useGlobal from "../store";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,13 +21,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PageContainer(props) {
   const classes = useStyles();
-  const [globalState, globalActions] = useGlobal();
   const [open, setOpen] = useState(false);
-
-  // useEffect(() => {
-  //   console.log(globalState);
-  //   // Update the document title using the browser API
-  // }, [open]);
 
   const thisHappened = () => {
     console.log("clicking");
@@ -37,8 +30,6 @@ export default function PageContainer(props) {
 
   return (
     <div className={classes.root}>
-      {/* <RescheduleDialog /> */}
-
       <Loading open={open} />
       <header className="button-container">
         <div className="faq-button">

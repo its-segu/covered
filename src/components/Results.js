@@ -78,14 +78,14 @@ export default function Results() {
       <h6>{customer.maritalStatus}</h6>
       <h6>{customer.dob}</h6>
       <h6>{customer.interger}</h6>
-      <div className={classes.buttonDiv}>
+      {/* <div className={classes.buttonDiv}>
       <Button classes={{
         root: classes.buttonSecond,
       }}>Confirm</Button>
       <Button classes={{
         root: classes.buttonRoot,
       }}>Reschedule</Button>
-      </div>
+      </div> */}
       </div>
       ))}
     </div>

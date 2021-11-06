@@ -1,10 +1,7 @@
 import * as React from "react";
-import { useEffect, useState } from "react";
-
 import "../styles/Loading.css";
 import Dialog from "@material-ui/core/Dialog";
 import Slide from "@material-ui/core/Slide";
-import useGlobal from "../store";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -18,7 +15,6 @@ export default function Loading(props) {
         open={props.open}
         TransitionComponent={Transition}
         keepMounted
-        // onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
         PaperProps={{
           style: {
