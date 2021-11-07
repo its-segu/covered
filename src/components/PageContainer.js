@@ -39,11 +39,11 @@ export default function PageContainer(props) {
   return (
     <div className={classes.root}>
       <Loading open={open} />
-      <header className="button-container">
-        <div className="faq-button">
+      <header className="covered-container">
+        <div className="form-section">
           <FormSubmit onHappened={thisHappened} />
         </div>
-        <div className="check-your-balance-button">
+        <div className="covered-section">
           <h1 data-aos="fade-down">We've got you </h1>
           <svg
           data-aos="zoom-out"
@@ -114,14 +114,14 @@ L94.52,87.02c-14.64,14.64-38.39,14.64-53.03,0c-14.64-14.64-14.64-38.39,0-53.03c1
             </path>
           </svg>
 
-          <h1 data-aos="fade-up" className="covered">Covered</h1>
-          {/* <img
+          {/* <h1 data-aos="fade-up" className="covered">Covered</h1> */}
+          <img
             data-aos="fade-up"
             src={myIcon}
             alt="icon"
             width="350"
             height="150"
-          /> */}
+          />
         </div>
       </header>
     </div>
