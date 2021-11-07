@@ -26,5 +26,5 @@ Error Handling \
 Animation/Design \
 UI/UX \
 Responsive Design \
-Deployment \
+Deployment 
 
