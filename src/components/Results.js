@@ -14,19 +14,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     flexDirection: "column",
   },
-  customer: {
-    height: 50,
-    cursor: "pointer",
-    display: "flex",
-    alignItems: "center",
-    padding: "10px 20px",
-    justifyContent: "space-between",
-    color: "black",
-    marginBottom: 10,
-    color: "#636161",
-    width: "95%",
-    boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-  },
+
   buttonDiv: {
     alignSelf: "flex-end",
     display: "flex",

@@ -112,7 +112,7 @@ svg #loop-offset {
 @media screen and (max-width: 1150px) {
   .form-section {
     width: 100%;
-
+    height: auto;
   }
   .covered-section {
     width: 100%;
