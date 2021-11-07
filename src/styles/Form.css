@@ -6,36 +6,7 @@
   align-items: center;
   justify-content: space-around;
 }
-/* .gift-button {
-  background-color: #d9dfd936;
-  border: none;
-  padding: 15px 30px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: 700;
-  color: black;
-}
-.balance-button {
-  background-color: #d9dfd936;
-  border: none;
-  padding: 15px 30px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: 700;
-  color: blue;
-} */
+
 .form-section {
   width: 50%;
   height: 100%;

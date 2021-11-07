@@ -47,9 +47,7 @@ export default function NavBar(props) {
             <img src={myIcon} alt="icon" width="130px" />
           </Typography>
 
-          <Button onClick={homeView}>
-            Back To Form
-          </Button>
+          <Button onClick={homeView}>Back To Form</Button>
         </Toolbar>
       </AppBar>
     </div>

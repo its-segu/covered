@@ -1,10 +1,11 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "../styles/Results.css";
 import { makeStyles } from "@material-ui/core/styles";
 import useGlobal from "../store";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,22 +15,21 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     flexDirection: "column",
   },
-
   buttonDiv: {
-    alignSelf: "flex-end",
     display: "flex",
     flexDirection: "row",
     padding: 5,
   },
   buttonRoot: {
-    backgroundColor: "#47d5dc",
+    backgroundColor: "#55d1c5",
+    padding: "10px 20px",
     color: "white",
     "&:hover": {
       backgroundColor: "#47d5dc",
     },
   },
   buttonSecond: {
-    backgroundColor: "#a9a9a9",
+    backgroundColor: "#55d1c5",
     color: "white",
     marginRight: 3,
     "&:hover": {
@@ -40,7 +40,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Results() {
   const classes = useStyles();
-  const [sortedAppointments, setSortedAppointments] = useState([]);
   const [customers] = useGlobal((state) => state.customers);
 
   useEffect(() => {
@@ -64,15 +63,16 @@ export default function Results() {
           <h4>{customer.gender}</h4>
           <h4>{customer.maritalStatus}</h4>
           <h4>{customer.dob}</h4>
-          <h4>{customer.interger}</h4>
-          {/* <div className={classes.buttonDiv}>
-      <Button classes={{
-        root: classes.buttonSecond,
-      }}>Confirm</Button>
-      <Button classes={{
-        root: classes.buttonRoot,
-      }}>Reschedule</Button>
-      </div> */}
+          {/* <h4>{customer.interger}</h4> */}
+          <div className={classes.buttonDiv}>
+            <Button
+              classes={{
+                root: classes.buttonRoot,
+              }}
+            >
+              {customer.interger}
+            </Button>
+          </div>
         </div>
       ))}
     </div>

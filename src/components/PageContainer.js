@@ -31,7 +31,7 @@ export default function PageContainer(props) {
       duration: 1500,
     });
   }, []);
-  const thisHappened = () => {
+  const startLoad = () => {
     console.log("clicking");
     setOpen(true);
   };
@@ -41,12 +41,12 @@ export default function PageContainer(props) {
       <Loading open={open} />
       <header className="covered-container">
         <div className="form-section">
-          <FormSubmit onHappened={thisHappened} />
+          <FormSubmit thisSubmitted={startLoad} />
         </div>
         <div className="covered-section">
           <h1 data-aos="fade-down">We've got you </h1>
           <svg
-          data-aos="zoom-out"
+            data-aos="zoom-out"
             id="preloader"
             width="240px"
             height="120px"
@@ -56,7 +56,7 @@ export default function PageContainer(props) {
           >
             <path
               id="loop-normal"
-              class="st1"
+              className="st1"
               d="M120.5,60.5L146.48,87.02c14.64,14.64,38.39,14.65,53.03,0s14.64-38.39,0-53.03s-38.39-14.65-53.03,0L120.5,60.5
 L94.52,87.02c-14.64,14.64-38.39,14.64-53.03,0c-14.64-14.64-14.64-38.39,0-53.03c14.65-14.64,38.39-14.65,53.03,0z"
             >
