@@ -53,7 +53,6 @@ export default function FormSubmit(props) {
   }, []);
 
   const formSubmit = (evt) => {
-    // evt.preventDefault();
     props.thisSubmitted();
 
     if (interger % 15 === 0) personObject.interger = "FizzBuzz";

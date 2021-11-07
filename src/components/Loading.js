@@ -26,7 +26,6 @@ export default function Loading(props) {
         <div className="load-wrapp">
           <h1 style={{ color: "white" }}>LOADING</h1>
           <div className="load-3">
-            {/* <h1>LOADING</h1> */}
             <div className="line"></div>
             <div className="line"></div>
             <div className="line"></div>

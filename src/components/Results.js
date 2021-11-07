@@ -63,7 +63,6 @@ export default function Results() {
           <h4>{customer.gender}</h4>
           <h4>{customer.maritalStatus}</h4>
           <h4>{customer.dob}</h4>
-          {/* <h4>{customer.interger}</h4> */}
           <div className={classes.buttonDiv}>
             <Button
               classes={{
