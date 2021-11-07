@@ -51,7 +51,7 @@ export default function Results() {
 
   return (
     <div className={classes.root}>
-      <div data-aos="fade-down" className="header">
+      <div data-aos="fade-down" className="header-labels">
         <h6>Name</h6>
         <h6>Gender</h6>
         <h6>Marital Status</h6>

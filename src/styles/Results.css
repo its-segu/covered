@@ -1,4 +1,4 @@
-.header {
+.header-labels {
   background-color: #55d1c5;
   height: 10px;
   cursor: pointer;
@@ -25,21 +25,23 @@
   color: #636161;
   width: 95%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 @media screen and (max-width: 1150px) {
   .customer {
     padding: 10px 5px;
     justify-content: space-around;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: start;
 
-    /* flex-direction: column;
-    flex-wrap: wrap; */
     /* justify-content: none; */
   }
-  .header {
-    padding: 10px 5px;
-    justify-content: space-around;
-
+  .header-labels {
+    display: none;
+  }
+  h4 {
+    margin: 3px;
   }
 }
