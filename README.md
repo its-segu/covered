@@ -20,11 +20,11 @@ Page is deployed with github pages [Covered Test Project](https://its-segu.githu
 
 ### Skills
 
-React JS
-State Management 
-Error Handling
-Animation/Design
-UI/UX
-Responsive Design
-Deployment
+React JS \
+State Management \
+Error Handling \
+Animation/Design \
+UI/UX \
+Responsive Design \
+Deployment \
 
