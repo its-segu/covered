@@ -18,7 +18,7 @@ You will also see any lint errors in the console.
 
 Page is deployed with github pages [Covered Test Project](https://its-segu.github.io/covered/).
 
-### Skills
+## Skills
 
 React JS \
 State Management \
