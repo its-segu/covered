@@ -9,6 +9,13 @@ input[type="password"] {
   /* #424242 */
 }
 
+input:-internal-autofill-selected {
+  background-color: transparent;
+
+
+}
+
+
 .select-input {
   padding: 15.5px;
 }
