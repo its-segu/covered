@@ -26,14 +26,14 @@ Error Handling \
 Animation/Design \
 UI/UX \
 Responsive Design \
-React Browser \
+React Router \
 Regex for input validation
 
 I focused on the UI and animations for this project. I made this page fully responsive and used ephemeral storage in the form of state management using 'use-global-hook'. I also added some form validation to the form using Regular expressions for Numerical and Alphabetical validation. 
 
 ## Libraries
 
-React Browser\
+React Router\
 Material UI\
 Animate On Scroll\
 Use-global-hook\
